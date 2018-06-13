@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	{%load static%}
+
+	<title>Alumni Student Mentorship Program</title>
+	<link rel="shortcut icon" href="{%static 'img/ASMP logo black.ico'%}" />
+	<link rel="stylesheet" type="text/css" href="{%static 'css/style.css'%}">
+	<link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css'%}">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script src="{%static 'js/bootstrap.min.js'%}"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="{%static 'js/main.js'%}"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body id="home">
+	
+	<div id="loader">
+		<div class="circle"></div>
+	</div>
+	<div id="video" class="hidden-xs hidden-sm">
+		<video autoplay>
+			<source src="{%static 'video/Final Loader.webm'%}" type="video/mp4">
+		</video>
+	</div>
+	<a href="javascript:void(0);" id="scroll" class="scroll-up" style="display: none;">
+		<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+		 <path d="m0 97.301 l49.996-86.602 50.004 86.602z"/>
+		</svg>
+	</a>
+	<div id="navbar">
+		<div class="navbar-icon">
+     		<a href="{% url 'home:home' %}" ><img class="navbar-brand" href="#" src="{%static 'img/logo1.png'%}"></a>
+    	</div>
+		<!-- <a href="#home"  class="items d-none d-lg-block">Home</a> -->
+  		<a href="#about" class="items d-none d-lg-block">About Us</a>
+		<a href="#events"  class="items d-none d-lg-block">Events</a>
+  		<a href="#contact" class="items d-none d-lg-block">Contact</a>
+  		<div class="btn-reg">
+  			<button class="btn rbtn d-none d-lg-block"> <a target="_blank" href="https://tinyurl.com/ASMP-mentor-reg">Register now</a></button>	
+  		</div>
+  		
+  		<div class="menu-button">
+			<div class="top"></div>
+			<div class="middle"></div>
+			<div class="bottom"></div>
+		</div>
+		<div class="overlay" id="overlay">
+		<div class="overlay-icon">
+     			<img class="overlay-brand" href="#" src="{%static 'img/ASMP logo black.png'%}">
+    		</div>
+  			<nav class="overlay-menu">
+  			
+    			<ul>
+      				<li><a href="#about">About Us</a></li>
+      				<li><a href="#events">Events</a></li>
+      				<li><a href="#gallery">Gallery</a></li>
+      				<!-- <li><a href="#testimonials">Testimonials</a></li> -->
+      				<li><a href="https://goo.gl/VvnjSB">Brochure</a></li>
+      				<li><a href="{% url 'team:team' %}">Contact Us</a></li>
+      				<li><a target="_blank" href="https://tinyurl.com/ASMP-mentor-reg" style="color: #FE6D2C">Register Now</a></li>
+    			</ul>
+  			</nav>
+		</div>
+	</div>
+
+	<div class="container">
+		<div id="demo" class="carousel slide" data-ride="carousel">
+			<ul class="carousel-indicators">
+				<li data-target="#demo" data-slide-to="0" class="active"></li>
+    			<li data-target="#demo" data-slide-to="1"></li>
+    			<li data-target="#demo" data-slide-to="2"></li>
+    			<li data-target="#demo" data-slide-to="3"></li>
+    			<li data-target="#demo" data-slide-to="4"></li>
+    			<li data-target="#demo" data-slide-to="5"></li>
+			</ul>
+
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+			    	<img src="{%static 'img/testimonial1.png'%}">
+			    </div>
+
+			    <div class="carousel-item">
+			    	<img src="{%static 'img/testimonial2.png'%}">
+			    </div>
+
+			    <div class="carousel-item">
+			    	<img src="{%static 'img/testimonial3.png'%}">
+			    </div>
+			    <div class="carousel-item">
+			    	<img src="{%static 'img/testimonial4.png'%}">
+			    </div>
+			    <div class="carousel-item">
+			    	<img src="{%static 'img/testimonial5.png'%}">
+			    </div>
+			    <div class="carousel-item">
+			    	<img src="{%static 'img/testimonial6.png'%}">
+			    </div>
+			</div>
+			 	<a class="carousel-control-prev" href="#demo" data-slide="prev">
+			    	<span class="carousel-control-prev-icon"></span>
+				</a>
+				<a class="carousel-control-next" href="#demo" data-slide="next">
+			    	<span class="carousel-control-next-icon"></span>
+				</a>
+		</div>	
+		
+		<div id="about" class="About-us">
+			<h1>About Us</h1>
+			<p>
+				Alumni Student Mentorship Programme, an initiative by Student Alumni Relations Cell aims at creating a platform to foster meaningful mentoring relationships between  alumni and current students. ASMP achieves this objective by bringing together alumni mentors and student mentees, and conducts various events to enrich their mentoring experience.
+			</p>
+			<div class="embed-responsive embed-responsive-21by9">
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CtAfzNVLyBI?loop=1">
+				</iframe>
+			</div>
+		</div>
+		<div class="row infograph">
+			<div class="col-lg-6">
+				<img src="{%static 'img/circle 1.png'%}">
+			</div>
+			<div class="col-lg-3">
+				<img src="{%static 'img/vertical 1cr.png'%}">
+			</div>
+			<div class="col-lg-3">
+				<img src="{%static 'img/vertical 2cr.png'%}">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<h4 style="text-align: center">Infographics: Mentors in different fields</h4>
+			</div>
+		</div>
+
+		<div class="row infograph-2">
+			<div class="col-lg-6">
+				<img src="{%static 'img/circle.png'%}">
+			</div>
+			<div class="col-lg-3">
+				<img src="{%static 'img/vertical 4cr.png'%}">
+			</div>
+			<div class="col-lg-3">
+				<img src="{%static 'img/vertical 3cr.png'%}">
+			</div>
+			
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<h4 style="text-align: center;">Infographics: Mentors of different branches</h4>
+			</div>
+		</div>
+
+		<div id="events" class="events">
+				<h1>Events</h1>
+			<div class="row align-items-end">
+				<div class="image col-lg-6">
+					<img src="{%static 'img/BTIn.png'%}">
+				</div>
+				<div class="col-lg-6">
+					<div class="events-content">
+						<h4 class="r-align">Break The Ice</h4>
+						<p>	After the mentees are put in touch with mentors, they are invited over a lunch which is aimed at fostering personal interaction and a platform for kick-starting meaningful discussion.
+						</p>
+					</div>
+					<div class="row">
+						<div class="btn-feedback">
+							<button class="btn fbtn"><a target="_blank" href="https://tinyurl.com/yaoh8r8l">Feedback</a></button>	
+						</div>
+						<div class="btn-gallery">
+							<button class="btn gbtn"><a target="_blank" href="https://drive.google.com/drive/folders/0B4EFHfUFWL_teTRrdGNtZHlHVUU">Gallery</a></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row align-items-end">
+				
+				<div class="col-lg-6 order-2 order-lg-6">
+					<div class="events-content">
+						<h4 class="l-align">Mentors Mentees Meet</h4>
+						<p>MMM is an open house discussion between mentor and mentees aimed at assessment and evaluation of the current ASMP structure and execution through the lens of both alumni and students.
+						</p>
+					</div>
+					<div class="row">
+						<div class="btn-feedback">
+							<button class="btn fbtn"><a target="_blank" href="https://tinyurl.com/yaoh8r8l">Feedback</a></button>	
+						</div>
+						<div class="btn-gallery">
+							<button class="btn gbtn"><a target="_blank" href="https://drive.google.com/drive/folders/0B4EFHfUFWL_teTRrdGNtZHlHVUU">Gallery</a></button>
+						</div>
+					</div>
+				</div>
+				<div class="image col-lg-6 order-1 order-lg-6">
+					<img src="{%static 'img/MMM.png'%}">
+				</div>
+
+			</div>
+			
+			<div class="row align-items-end">
+				<div class="image col-lg-6 ">
+					<img src="{%static 'img/CTn.png'%}">
+				</div>
+				<div class="col-lg-6 ">
+					<div class="events-content">
+						<h4 class="r-align">Group Mentoring</h4>
+						<p>Mentors are invited to interact with a group of 4-5 students. Unlike attending a career talk, group mentoring is a brief 2-sided approach towards giving students insight towards a career option where they can direct the discussion towards the relevent domain.
+						</p>
+					</div>
+					<div class="row">
+						<div class="btn-feedback">
+							<button class="btn fbtn"><a target="_blank" href="https://tinyurl.com/yaoh8r8l">Feedback</a></button>	
+						</div>
+						<div class="btn-gallery">
+							<button class="btn gbtn"><a target="_blank" href="https://drive.google.com/drive/folders/0B4EFHfUFWL_teTRrdGNtZHlHVUU">Gallery</a></button>
+						</div>
+					</div>
+				</div>
+				
+
+			</div>
+			<div class="row align-items-end">
+				
+				<div class="col-lg-6 col-center order-2 order-lg-6">
+					<div class="events-content">
+						<h4 class="l-align">Shadow Programme</h4>
+							<p>ASMP arranges student visits to the office or the work place of mentors giving mentees an opportunity, a  peek in the professional life of the mentors as well as the functioning of the industry they are interested in.
+							</p>
+					</div>
+					<div class="row">
+						<div class="btn-feedback">
+							<button class="btn fbtn"><a target="_blank" href="https://tinyurl.com/yaoh8r8l">Feedback</a></button>	
+						</div>
+						<div class="btn-gallery">
+							<button class="btn gbtn"><a target="_blank" href="https://drive.google.com/drive/folders/0B4EFHfUFWL_teTRrdGNtZHlHVUU">Gallery</a></button>
+						</div>
+					</div>
+				</div>
+				<div class="image col-lg-6 order-1 order-lg-6">
+					<img src="{%static 'img/shadow1.png'%}">
+				</div>
+			</div>
+		</div>
+	</div>
+	{%load static%}
+	{%block content%}
+	<footer class="footer" id="contact">
+	<div class="container">
+		<div class="row first">
+			<div class="btn-broucher">
+				<button class="btn bbtn"><a target="_blank" href="https://goo.gl/VvnjSB">Brochure</a></button>	
+			</div>
+			<div class="btn-registration">
+				<button class="btn r-btn"><a target="_blank" href="https://tinyurl.com/ASMP-mentor-reg">Registration</a></button>
+			</div>
+		</div>
+		<div class="row second">
+			<div class="col-lg-6 leftctm">
+				<div class="ctm">
+					<p>Gaurav Raj Singh</p>	
+				</div>
+				<div class="contact">
+					<div class="phone" >
+						<img src="{%static 'img/phone.png'%}">
+					</div>
+					<div>
+						<p>9987108186</p>	
+					</div>
+					<div class="mail">
+						<a href="mailto:ayush11ankit12@gmail.com"><img src="{%static 'img/mail.png'%}"></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 rightctm">
+				<div class="ctm">
+					<p>Yamuna Devi</p>	
+				</div>
+				<div class="contact">
+					<div class="phone">
+						<img src="{%static 'img/phone.png'%}">
+					</div>
+					<div>
+						<p>9987108186</p>	
+					</div>
+					<div class="mail">
+						<a target="_blank" href="mailto:ayush11ankit12@gmail.com"><img src="{%static 'img/mail.png'%}"></a>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="row last">
+			<div class="col-lg-6 address">
+				<p>
+					Dean ACR Office,<br> 
+					Main Building, First Floor,IIT Bombay,<br> 
+					Powai Mumbai - 400076, INDIA <br>
+					Phone: 9122-2576-4889, 2576-7023  Email: dean.acr.office@iitb.ac.in
+				</p>
+			</div>
+			<div class="col-lg-6 social">
+			<div class="facebook">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 96.124 96.123" style="enable-background:new 0 0 96.124 96.123;" xml:space="preserve">
+					<g>
+						<path d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803   c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654   c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246   c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"/>
+					</g>
+				</svg>
+			</div>
+			<div class="youtube">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 310 310" style="enable-background:new 0 0 310 310;" xml:space="preserve" width="512px" height="512px">
+					<g id="XMLID_822_">
+						<path id="XMLID_823_" d="M297.917,64.645c-11.19-13.302-31.85-18.728-71.306-18.728H83.386c-40.359,0-61.369,5.776-72.517,19.938   C0,79.663,0,100.008,0,128.166v53.669c0,54.551,12.896,82.248,83.386,82.248h143.226c34.216,0,53.176-4.788,65.442-16.527   C304.633,235.518,310,215.863,310,181.835v-53.669C310,98.471,309.159,78.006,297.917,64.645z M199.021,162.41l-65.038,33.991   c-1.454,0.76-3.044,1.137-4.632,1.137c-1.798,0-3.592-0.484-5.181-1.446c-2.992-1.813-4.819-5.056-4.819-8.554v-67.764   c0-3.492,1.822-6.732,4.808-8.546c2.987-1.814,6.702-1.938,9.801-0.328l65.038,33.772c3.309,1.718,5.387,5.134,5.392,8.861   C204.394,157.263,202.325,160.684,199.021,162.41z"/>
+					</g>
+				</svg>
+			</div>
+			<div class="linkedin">	
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 478.165 478.165" style="enable-background:new 0 0 478.165 478.165;" xml:space="preserve" width="512px" height="512px">
+					<g>
+						<path id="LinkedIn__x28_alt_x29__3_" d="M442.78,0H35.424C15.859,0,0,15.401,0,34.288v409.688   c0,18.828,15.859,34.189,35.424,34.189h407.337c19.585,0,35.404-15.361,35.404-34.189V34.288C478.165,15.401,462.345,0,442.78,0z    M145.003,400.244H72.781V184.412h72.223V400.244z M108.842,154.965h-0.478c-24.247,0-39.927-16.696-39.927-37.337   c0-21.219,16.158-37.337,40.863-37.337c24.725,0,39.927,16.118,40.385,37.337C149.705,138.269,134.045,154.965,108.842,154.965z    M405.384,400.244h-72.083V284.807c0-29.009-10.599-48.952-36.739-48.952c-20.063,0-31.798,13.428-36.958,26.458   c-1.893,4.423-2.391,10.898-2.391,17.393v120.537H184.95c0,0,0.916-195.629,0-215.832h72.263v30.603   c9.484-14.684,26.658-35.703,65.01-35.703c47.577,0,83.161,30.862,83.161,97.167V400.244z M256.774,215.712   c0.06-0.219,0.159-0.438,0.418-0.677v0.677H256.774L256.774,215.712z"/>
+					</g>	
+				</svg>
+			</div>
+			</div>
+		</div>
+	</div>
+		
+	</footer>
+	{%endblock%}
+	{% block script %}
+	<script>
+		var prevScrollpos = window.pageYOffset;
+		window.onscroll = function() {
+		var currentScrollPos = window.pageYOffset;
+  			if (prevScrollpos > currentScrollPos) {
+    			document.getElementById("navbar").style.top = "0";
+  			} else {
+    			document.getElementById("navbar").style.top = "-100px";
+  			}
+  		prevScrollpos = currentScrollPos;
+		}
+	</script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		setTimeout(function(){
+			$('#loader').fadeOut(100);
+			$('video').on('ended',function(){
+    		$('#video').fadeOut('slow');
+    	})
+		}, 800);
+    	
+	});
+	</script>
+	{%endblock%}
+</body>
+</html>
