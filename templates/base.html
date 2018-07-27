@@ -1,0 +1,24 @@
+{% load staticfiles %}
+{%load static %}
+<!DOCTYPE html >
+<html lang="en" class="startup" prefix="og: http://ogp.me/ns#">
+<head>
+  <title>ASMP-Mentor detail</title>
+  {% load static%}
+  <link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css'%}">
+  <link rel="stylesheet" type="text/css" href="{%static 'css/mentorlist.css'%}">
+  {% block meta %}
+  {% endblock %}
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </div>
+</div>
+</body>
+</html>
+

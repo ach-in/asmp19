@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['asmp.sarc-iitb.org','127.0.0.1','[::1]','localhost']
 INSTALLED_APPS = [
     'homepage',
     'team',
+    'registration',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

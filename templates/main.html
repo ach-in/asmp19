@@ -1,0 +1,65 @@
+<!DOCTYPE>
+<html>
+<head>
+  <title>Mentor List</title>
+  {% load static%}
+  <link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css'%}">
+  <link rel="stylesheet" type="text/css" href="{%static 'css/mentorlist.css'%}">
+</head>
+<body>
+<div id="main">
+    <div id="icon">
+      <a href="http://asmp.sarc-iitb.org" ><img src="{%static 'img/logo1.png'%}"></a>
+    </div>
+</div>
+
+<div class="panel">
+  <ul>
+    <li class="selected">
+      <a class="btn" href="{% url "mentors:mentor_list" %}">All</a>
+    </li>
+    <li class="selected">
+      <a class="btn" href="{% url "mentors:analytics" %}">Analytics</a>
+    </li>
+    <li class="selected">
+      <a class="btn" href="{% url "mentors:consult" %}">Consult</a>
+    </li>
+    <li class="selected">
+      <a class="btn" href="{% url "mentors:finance" %}">Finance</a>
+    </li>
+  </ul>
+</div>
+<div class="list offset-2 col-lg-10">
+  <div class="row">
+    {% for mentor in all_mentors%}
+    <div class="col-lg-2" style="padding:0;margin:0;cursor:pointer;" tabindex="0">
+      <div {%if mentor.alloted == 1 %} class="blur" {%endif%}>
+      <div id="mentor">
+      <a target="_blank" href="{{ mentor.get_absolute_url }}">
+        <div id="header">
+        <div>
+          {% if mentor.alloted == 0 %}<h3>{{mentor.code}}</h3>{% endif %}
+        </div>
+        </div>
+        <div id="subheader">
+          <h6 style="font-family:roboto;">&nbsp;{{mentor.code}}</h6>
+        </div>
+        <div id="tag">
+          <h4 style="font-family: roboto;">&nbsp;{{mentor.tags}}</h4>
+        </div>
+        <div id="general">
+          <p>
+            {{mentor.designation}}<br>
+            {{mentor.designation}}<br>
+            {{mentor.company}}
+          </p>
+        </div>
+        </a>
+        </div>
+        </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+</body>
+</html>

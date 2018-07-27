@@ -71,7 +71,7 @@ button{
 #navbar .navbar-icon{
   float: left;
   display: inline-block;
-  margin-right: 48%;
+  margin-right: 46%;
   padding-left: 2%;
 }
 
@@ -578,9 +578,16 @@ button{
     display: block;
     padding-left: 2%;
   }
-  .overlay ul{
-    margin-top: -50px;
+  #overlay .overlay-icon img{
+    height: 45px;
+    width: auto;
   }
+  .overlay ul{
+    margin-top:0;
+    font-size: 8vw;
+    margin-left: -80px;
+  }
+
 
   .row h2{
     margin-top: 10px;

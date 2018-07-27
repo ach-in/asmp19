@@ -150,7 +150,7 @@ a{
   top: 0;
   bottom: 0;
   margin: auto;
-  animation: loading 0.8s ease-in-out infinite; }
+  animation: loading 1s ease-in-out infinite; }
 
 @keyframes loading {
   0% {
@@ -228,13 +228,13 @@ a{
 #navbar .navbar-icon{
   float: left;
   display: inline-block;
-  margin-right: 38%;
+  margin-right: 46%;
   padding-left: 2%;
 }
 
 #navbar .navbar-icon img{
   height: 79px;
-  width: 100%;
+  width: auto;
 }
 
 #overlay .overlay-icon{
@@ -476,12 +476,11 @@ a{
 
 .carousel{
 	z-index: 0;
-	widows: 100%;
+	width: 100%;
 	height: 720px;
 	margin-top: 10%;
-	margin-bottom: 18%;
+	margin-bottom: 8%;
 	padding-top: 5%;
-
 }
 
 .carousel-inner{
@@ -499,33 +498,26 @@ a{
 	position: relative;
 	bottom: -55px; 
 	background: #999;
-    border-color: transparent;
-    box-shadow: inset 0 2px 1px rgba(0,0,0,0.2); 
+	border-color: transparent;
+	box-shadow: inset 0 2px 1px rgba(0,0,0,0.2); 
 }
-/*
-.carousel-item {
-	width: 100%;
-	height: 500px;
-	position: relative;
-}*/
 
 /*ABOUT US*/
 
 .container .About-us{
-	padding-top: 8%;
+	padding-top: 10%;
 }
 
 .container .About-us h1{
 	font-size: 80px;
-  font-family: "Alfa Slab One";
-	padding-bottom: 20px;
-		
+	font-family: "Alfa Slab One";
+	padding-bottom: 20px;	
 }
 
 
 .container .About-us p{
 	font-size: 25px;
-  font-family: "Montserrat";
+	font-family: "Montserrat";
 	padding-bottom: 40px;
 }
 
@@ -536,10 +528,9 @@ a{
 }
 
 .infograph{
-	margin-top: 10%; 
-  margin-bottom: 10%;
+	margin-top: 5%; 
+	margin-bottom: 10%;
 }
-
 
 .infograph .col-lg-6{
   margin: 0; 
@@ -631,51 +622,44 @@ a{
 }
 
 .events .row{
-	padding-top: 10%;
-	padding-bottom: 22%;
+	padding-top: 5%;
+	padding-bottom: 15%;
 	
 }
 
 .events h1{
 	font-size:80px;
-  font-family: "Alfa Slab One";	
-}
-.events .row .col-lg-6 .events-content{
-	
+	font-family: "Alfa Slab One";	
 }
 
 .events .row .col-lg-6 .events-content h4{
 	font-size: 40px;
-  font-family: "Passion One";
-	
+	font-family: "Passion One";
 	position: relative;
-	color: #F36E36;
-	
+	color: #F36E36;	
 }
 
 .events .row .col-lg-6 .events-content p{
 	text-align:justify;
 	font-size: 25px;
-  font-family: "Montserrat";
+	font-family: "Montserrat";
 	padding: 12% 5% 5% 5%;
 	position: relative;
-	
 }
 
 .events .row .col-lg-6 .events-content .r-align{
 	text-align: right;
 	padding-right: 5%;
-	
 }
 
 .events .row .col-lg-6 .events-content .l-align{
 	text-align: left;
 	padding-left: 6%;
-	
 }
 
 @media screen and (max-width: 990px){
-	.events .row .col-lg-6 .events-content .r-align{
+
+.events .row .col-lg-6 .events-content .r-align{
 	text-align: center;
 	padding-right: 0px;
 }
@@ -859,30 +843,8 @@ a{
 .events .row:nth-of-type(3) img{
   margin-bottom: 14%;
 }
-/*
-.events .row:nth-of-type(4) img{
-  width: 100%;
-  height: auto;
-  
-}*/
 
 /*EVENTS*/
-
-/*TESTIMONIALS*/
-/*.Testimonials{
-	margin-top: 10%;
-}
-
-.Testimonials .row{
-	padding-top: 10%;
-	padding-bottom: 22%;
-	
-}
-
-.Testimonials h1{
-	font:80px Raleway;
-		
-}*/
 
 footer{
 	z-index: -50;
@@ -895,24 +857,24 @@ footer{
 }
 
 .footer .row .btn-broucher{
-	margin-left: 25%;	
+	margin-left: 22%;	
 }
 
 .footer .row .btn-broucher a{
-  text-decoration: none;
+	text-decoration: none;
 }
 
 
 .footer .row .btn-broucher button, button::after {
-  -webkit-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
+	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
 
 .footer .row .btn-broucher button{
 	font-size:25px;
-  font-family: "Montserrat";
+ 	font-family: "Montserrat";
 	text-transform: uppercase;
 	padding-right: 55px;
 	padding-left: 55px; 
@@ -970,18 +932,18 @@ footer{
 }
 
 .footer .row .btn-registration button, button::after {
-  -webkit-transition: all 0.3s;
+ 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
+  	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
 
 .footer .row .btn-registration button{
 	font-size:25px;
-  font-family: "Montserrat";
+	font-family: "Montserrat";
 	text-transform: uppercase;
-	padding-right: 55px;
-	padding-left: 55px; 
+	padding-right: 40px;
+	padding-left: 40px; 
 	background: #fff;
 	color:#000000;
 	border: 3px solid #fff;
@@ -999,8 +961,8 @@ footer{
 
 
 .footer .row .btn-registration button:hover{
-	padding-right: 55px;
-	padding-left: 55px;  
+	padding-right: 40px;
+	padding-left: 40px;  
 	color:#fff;
 	border-color: #F36E36;
 }
@@ -1146,7 +1108,7 @@ footer{
 
 @media screen and (max-width:1600px){
 	#navbar .navbar-icon{
-  margin-right: 28%;
+  margin-right: 34%;
   }
 }
 
@@ -1165,7 +1127,7 @@ footer{
 }
 
   #navbar .navbar-icon{
-  margin-right: 23%;
+  margin-right: 30%;
   }
 }
 @media screen and (max-width:1200px){
@@ -1492,6 +1454,9 @@ footer{
 		font-size: 5vw;
 	}
 
+	.row .col-lg-12 h4{
+		font-size:5vw;
+	}
 	.events h1{
 		font-size:12vw;	
 	}
@@ -1568,36 +1533,66 @@ footer{
 
 @media screen and (max-width:464px){
 
-	#navbar{
-		height: 40px;
-	}
-  #navbar .navbar-icon{
+#navbar{
+	height: 40px;
+}
+#navbar .navbar-icon{
     margin-right: 0;
     padding-left: 2%;
-  }
+}
 
-  #navbar .navbar-icon img{
+#navbar .navbar-icon img{
     height: 45px;
     width: auto;
-  }
-  #overlay .overlay-icon img{
+}
+
+.menu-button{
+	height:20px;
+	width:30px;
+}
+.menu-button div{
+	height:3px;
+}
+.menu-button div:nth-of-type(2){
+	top:8px;
+}
+
+.menu-button div:nth-of-type(3){
+	top:16px;
+}
+
+.menu-button .active .top{
+	transform: translateY(8px) translateX(0) rotate(45deg);
+}
+
+.menu-button .active .bottom{
+	transfotm: translateY(-8px) translateX(0) rotate(45deg);
+}
+#overlay .overlay-icon img{
   height: 45px;
   width: auto;
 }
-  .overlay ul {
+.overlay ul {
   margin-left: 10%;
+  font-size: 8vw;
 }
-	.carousel{
-		height: 240px;
-	}
+.carousel{
+	height: 240px;
+}
 
-	.carousel-indicators li {
-		bottom: -45px; 
-	}
-
-  .infograph{
+.carousel-indicators li {
+	bottom: -45px; 
+}
+.container .About-us .embed-responsive {
+	padding:50px;
+}
+.container .About-us .embed-responsive iframe{
+    padding-right: 0;
+    padding-left: 0;
+}
+.infograph{
     margin:0px;
-  }
+}
 
   .infograph .col-lg-6{
     margin: 0; 
@@ -1713,13 +1708,13 @@ footer{
     margin-left: 25%;
   }
   .footer .row .btn-broucher{
-    margin-left: 12%;
+    margin-left:26%;
    }
   .footer .row .btn-broucher button{
     font-size: 5vw;
    }
   .footer .row .btn-registration{
-    margin-left: 12%; 
+    margin-left: 22%; 
   }
   .footer .row .btn-registration button{
     font-size: 5vw; 
@@ -1765,10 +1760,10 @@ footer{
 		bottom: -15px; 
 	}
   .footer .row .btn-broucher{
-    margin-left: 12%;
+    margin-left: 24%;
    }
   
   .footer .row .btn-registration{
-    margin-left: 9%; 
+    margin-left: 19.5%; 
   }
 }

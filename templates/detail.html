@@ -1,0 +1,29 @@
+{% load staticfiles %}
+{%load static %}
+<!DOCTYPE html >
+<html lang="en" class="startup" prefix="og: http://ogp.me/ns#">
+<head>
+  <title>{{mentor.code}}</title>
+  {% load static%}
+  <link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css'%}">
+  <link rel="stylesheet" type="text/css" href="{%static 'css/mentorlist.css'%}">
+  {% block meta %}
+  {% endblock %}
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+{% block content %}
+	<div>
+		<h1>{{mentor.code}}</h1>
+		<h2>{{mentor.company}}</h2>
+		<h3>{{mentor.designation}}</h3>
+		<p>{{mentor.discp}}</p>
+	</div>
+{% endblock %}
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -28,7 +28,7 @@
 	</div>
 	<div id="video" class="hidden-xs hidden-sm">
 		<video autoplay>
-			<source src="{%static 'video/Final Loader.webm'%}" type="video/mp4">
+			<source src="{%static 'video/Final Loader.webm'%}" type="video/webm">
 		</video>
 	</div>
 	<a href="javascript:void(0);" id="scroll" class="scroll-up" style="display: none;">
@@ -38,14 +38,14 @@
 	</a>
 	<div id="navbar">
 		<div class="navbar-icon">
-     		<a href="{% url 'home:home' %}" ><img class="navbar-brand" href="#" src="{%static 'img/logo1.png'%}"></a>
+     		<a href="{% url 'home:home' %}" ><img class="navbar-brand" href="#" src="{%static 'img/asmplogo.png'%}"></a>
     	</div>
 		<!-- <a href="#home"  class="items d-none d-lg-block">Home</a> -->
   		<a href="#about" class="items d-none d-lg-block">About Us</a>
 		<a href="#events"  class="items d-none d-lg-block">Events</a>
-  		<a href="#contact" class="items d-none d-lg-block">Contact</a>
+  		<a href="{% url 'team:team' %}" class="items d-none d-lg-block">Contact</a>
   		<div class="btn-reg">
-  			<button class="btn rbtn d-none d-lg-block"> <a target="_blank" href="https://tinyurl.com/ASMP-mentor-reg">Register now</a></button>	
+  			<button class="btn rbtn d-none d-lg-block" onclick="registration()">Register now</button>	
   		</div>
   		
   		<div class="menu-button">
@@ -62,9 +62,9 @@
     			<ul>
       				<li><a href="#about">About Us</a></li>
       				<li><a href="#events">Events</a></li>
-      				<li><a href="#gallery">Gallery</a></li>
+      				<li><a target="_blank" href="https://drive.google.com/drive/folders/0B4EFHfUFWL_teTRrdGNtZHlHVUU">Gallery</a></li>
       				<!-- <li><a href="#testimonials">Testimonials</a></li> -->
-      				<li><a href="https://goo.gl/VvnjSB">Brochure</a></li>
+      				<li><a target="_blank" href="https://drive.google.com/file/d/1LzjDlnKR6xpQxgQNlDKbwqIcUqSzFa7p/view?usp=sharing">Brochure</a></li>
       				<li><a href="{% url 'team:team' %}">Contact Us</a></li>
       				<li><a target="_blank" href="https://tinyurl.com/ASMP-mentor-reg" style="color: #FE6D2C">Register Now</a></li>
     			</ul>
@@ -172,10 +172,10 @@
 					</div>
 					<div class="row">
 						<div class="btn-feedback">
-							<button class="btn fbtn"><a target="_blank" href="https://tinyurl.com/yaoh8r8l">Feedback</a></button>	
+							<button class="btn fbtn" onclick="feedback()">Feedback</button>		
 						</div>
 						<div class="btn-gallery">
-							<button class="btn gbtn"><a target="_blank" href="https://drive.google.com/drive/folders/0B4EFHfUFWL_teTRrdGNtZHlHVUU">Gallery</a></button>
+							<button class="btn gbtn" onclick="gallery()">Gallery</button>
 						</div>
 					</div>
 				</div>
@@ -184,16 +184,16 @@
 				
 				<div class="col-lg-6 order-2 order-lg-6">
 					<div class="events-content">
-						<h4 class="l-align">Mentors Mentees Meet</h4>
+						<h4 class="l-align">Mentor Mentee Meetup</h4>
 						<p>MMM is an open house discussion between mentor and mentees aimed at assessment and evaluation of the current ASMP structure and execution through the lens of both alumni and students.
 						</p>
 					</div>
 					<div class="row">
 						<div class="btn-feedback">
-							<button class="btn fbtn"><a target="_blank" href="https://tinyurl.com/yaoh8r8l">Feedback</a></button>	
+							<button class="btn fbtn" onclick="feedback()">Feedback</button>	
 						</div>
 						<div class="btn-gallery">
-							<button class="btn gbtn"><a target="_blank" href="https://drive.google.com/drive/folders/0B4EFHfUFWL_teTRrdGNtZHlHVUU">Gallery</a></button>
+							<button class="btn gbtn" onclick="">Gallery</button>
 						</div>
 					</div>
 				</div>
@@ -215,10 +215,10 @@
 					</div>
 					<div class="row">
 						<div class="btn-feedback">
-							<button class="btn fbtn"><a target="_blank" href="https://tinyurl.com/yaoh8r8l">Feedback</a></button>	
+							<button class="btn fbtn" onclick="feedback()">Feedback</button>		
 						</div>
 						<div class="btn-gallery">
-							<button class="btn gbtn"><a target="_blank" href="https://drive.google.com/drive/folders/0B4EFHfUFWL_teTRrdGNtZHlHVUU">Gallery</a></button>
+							<button class="btn gbtn" onclick="">Gallery</button>
 						</div>
 					</div>
 				</div>
@@ -235,10 +235,10 @@
 					</div>
 					<div class="row">
 						<div class="btn-feedback">
-							<button class="btn fbtn"><a target="_blank" href="https://tinyurl.com/yaoh8r8l">Feedback</a></button>	
+							<button class="btn fbtn" onclick="feedback()">Feedback</button>	
 						</div>
 						<div class="btn-gallery">
-							<button class="btn gbtn"><a target="_blank" href="https://drive.google.com/drive/folders/0B4EFHfUFWL_teTRrdGNtZHlHVUU">Gallery</a></button>
+							<button class="btn gbtn" onclick="">Gallery</button>
 						</div>
 					</div>
 				</div>
@@ -254,10 +254,10 @@
 	<div class="container">
 		<div class="row first">
 			<div class="btn-broucher">
-				<button class="btn bbtn"><a target="_blank" href="https://goo.gl/VvnjSB">Brochure</a></button>	
+				<button class="btn bbtn" onclick="brochure()">Brochure</button>	
 			</div>
 			<div class="btn-registration">
-				<button class="btn r-btn"><a target="_blank" href="https://tinyurl.com/ASMP-mentor-reg">Registration</a></button>
+				<button class="btn r-btn" onclick="registration()">Register Now</button>
 			</div>
 		</div>
 		<div class="row second">
@@ -270,10 +270,10 @@
 						<img src="{%static 'img/phone.png'%}">
 					</div>
 					<div>
-						<p>9987108186</p>	
+						<p>8209551541</p>	
 					</div>
 					<div class="mail">
-						<a href="mailto:ayush11ankit12@gmail.com"><img src="{%static 'img/mail.png'%}"></a>
+						<a href="mailto:gaurav@sarc-iitb.org"><img src="{%static 'img/mail.png'%}"></a>
 					</div>
 				</div>
 			</div>
@@ -286,10 +286,10 @@
 						<img src="{%static 'img/phone.png'%}">
 					</div>
 					<div>
-						<p>9987108186</p>	
+						<p>8454932559</p>	
 					</div>
 					<div class="mail">
-						<a target="_blank" href="mailto:ayush11ankit12@gmail.com"><img src="{%static 'img/mail.png'%}"></a>
+						<a target="_blank" href="mailto:yamuna@sarc-iitb.org"><img src="{%static 'img/mail.png'%}"></a>
 					</div>
 				</div>
 				
@@ -306,25 +306,31 @@
 			</div>
 			<div class="col-lg-6 social">
 			<div class="facebook">
+				<a target="_blank" href="https://www.facebook.com/SARC.IITB/?ref=br_rs">
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 96.124 96.123" style="enable-background:new 0 0 96.124 96.123;" xml:space="preserve">
 					<g>
 						<path d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803   c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654   c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246   c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"/>
 					</g>
 				</svg>
+				</a>
 			</div>
 			<div class="youtube">
+				<a target="_blank" href="https://www.youtube.com/user/SARCIIT">
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 310 310" style="enable-background:new 0 0 310 310;" xml:space="preserve" width="512px" height="512px">
 					<g id="XMLID_822_">
 						<path id="XMLID_823_" d="M297.917,64.645c-11.19-13.302-31.85-18.728-71.306-18.728H83.386c-40.359,0-61.369,5.776-72.517,19.938   C0,79.663,0,100.008,0,128.166v53.669c0,54.551,12.896,82.248,83.386,82.248h143.226c34.216,0,53.176-4.788,65.442-16.527   C304.633,235.518,310,215.863,310,181.835v-53.669C310,98.471,309.159,78.006,297.917,64.645z M199.021,162.41l-65.038,33.991   c-1.454,0.76-3.044,1.137-4.632,1.137c-1.798,0-3.592-0.484-5.181-1.446c-2.992-1.813-4.819-5.056-4.819-8.554v-67.764   c0-3.492,1.822-6.732,4.808-8.546c2.987-1.814,6.702-1.938,9.801-0.328l65.038,33.772c3.309,1.718,5.387,5.134,5.392,8.861   C204.394,157.263,202.325,160.684,199.021,162.41z"/>
 					</g>
 				</svg>
+				</a>
 			</div>
-			<div class="linkedin">	
+			<div class="linkedin">
+				<a target="_blank" href="">	
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 478.165 478.165" style="enable-background:new 0 0 478.165 478.165;" xml:space="preserve" width="512px" height="512px">
 					<g>
 						<path id="LinkedIn__x28_alt_x29__3_" d="M442.78,0H35.424C15.859,0,0,15.401,0,34.288v409.688   c0,18.828,15.859,34.189,35.424,34.189h407.337c19.585,0,35.404-15.361,35.404-34.189V34.288C478.165,15.401,462.345,0,442.78,0z    M145.003,400.244H72.781V184.412h72.223V400.244z M108.842,154.965h-0.478c-24.247,0-39.927-16.696-39.927-37.337   c0-21.219,16.158-37.337,40.863-37.337c24.725,0,39.927,16.118,40.385,37.337C149.705,138.269,134.045,154.965,108.842,154.965z    M405.384,400.244h-72.083V284.807c0-29.009-10.599-48.952-36.739-48.952c-20.063,0-31.798,13.428-36.958,26.458   c-1.893,4.423-2.391,10.898-2.391,17.393v120.537H184.95c0,0,0.916-195.629,0-215.832h72.263v30.603   c9.484-14.684,26.658-35.703,65.01-35.703c47.577,0,83.161,30.862,83.161,97.167V400.244z M256.774,215.712   c0.06-0.219,0.159-0.438,0.418-0.677v0.677H256.774L256.774,215.712z"/>
 					</g>	
 				</svg>
+				</a>
 			</div>
 			</div>
 		</div>
@@ -344,6 +350,18 @@
   			}
   		prevScrollpos = currentScrollPos;
 		}
+		function registration() {
+			window.open("https://tinyurl.com/ASMP-mentor-reg");
+		}
+		function brochure() {
+			window.open("https://drive.google.com/file/d/1LzjDlnKR6xpQxgQNlDKbwqIcUqSzFa7p/view?usp=sharing");
+		}
+		function gallery() {
+			window.open("https://drive.google.com/drive/folders/0B4EFHfUFWL_teTRrdGNtZHlHVUU");
+		}
+		function feedback(){
+			window.open("https://docs.google.com/forms/d/e/1FAIpQLScNTFaxfao4JT0qwBcmLtyETVHiyWaIXgLWu3Ekeb97-22bJA/viewform?chromeless=1&edit_requested=true");
+		}
 	</script>
 	<script type="text/javascript">
 	$(document).ready(function() {
@@ -353,7 +371,9 @@
     		$('#video').fadeOut('slow');
     	})
 		}, 800);
-    	
+    		setTimeout(function(){
+			$('#video').fadeOut('slow').empty();
+		},5000);
 	});
 	</script>
 	{%endblock%}
