@@ -2,7 +2,7 @@
 <html>
 <head>
 	{%load static%}
-	<title>Registraions</title>
+	<title>Registrations</title>
 	<link rel="shortcut icon" href="{%static 'img/ASMP logo black.ico'%}" />
 
 	<link rel="stylesheet" type="text/css" href="{%static 'css/reg.css'%}">
@@ -55,7 +55,7 @@
 		</div>
 		<div class="content">
 			<div class="reg-btn">
-				<button class="btn">Mentor Registeration</button>
+				<button class="btn" onClick="mentor()">Mentor Registration</button>
 			</div>
 		</div>
 	</div>
@@ -65,7 +65,7 @@
 		</div>
 		<div class="content">
 			<div class="reg-btn">
-				<button class="btn">Mentee Registeration</button>
+				<button class="btn" onclick="mentee()">Mentee Registration</button>
 			</div>
 		</div>
 	</div>
@@ -83,6 +83,23 @@
   		prevScrollpos = currentScrollPos;
 		}
 </script>
-
+ <script>
+                var prevScrollpos = window.pageYOffset;
+                window.onscroll = function() {
+                var currentScrollPos = window.pageYOffset;
+                        if (prevScrollpos > currentScrollPos) {
+                        document.getElementById("navbar").style.top = "0";
+                        } else {
+                        document.getElementById("navbar").style.top = "-100px";
+                        }
+                prevScrollpos = currentScrollPos;
+                }
+                function mentor() {
+                        window.open("https://docs.google.com/forms/d/e/1FAIpQLScwMYt20u4KyflAffiOXC9sseeAnOV67PUVOJIgpowOcuWYMw/viewform");
+                }
+                function mentee() {
+                        window.open("https://docs.google.com/forms/d/12zKXX6ZJ20D2Mt-aiBRmFSC5__LIPIbOC5wHNTO9jFc/viewform?edit_requested=true");
+                }
+        </script>
 </body>
 </html>

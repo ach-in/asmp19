@@ -1,0 +1,533 @@
+@import 'https://fonts.googleapis.com/css?family=Alfa+Slab+One';
+@import 'https://fonts.googleapis.com/css?family=Passion+One';
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
+@import 'https://fonts.googleapis.com/css?family=Oswald';
+@font-face{
+  font-family: myfont;
+  src:url(BebasNeue.otf);
+}
+/* width */
+::-webkit-scrollbar {
+	display: none;
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #000010; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #F36E36; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #F36E36; 
+}
+
+html body{
+	padding: 0;
+	margin: 0;
+}
+
+body.menu-open {
+    overflow-y: hidden;
+}
+
+#navbar {
+  background-color: #F36E36;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display:block;
+  transition: top 0.3s;
+  z-index: 100;
+}
+
+#navbar .items{
+	font-size:25px;
+  font-family: "Oswald";
+	margin-right: 1%;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	float: left;
+  	display: block;
+  	text-align: center;
+  	transition: 0.3s;
+  	cursor: pointer;
+  	padding: 25px;
+}
+
+#navbar .items:hover{
+	background-color: #fff;
+	color: #F36E36;
+}
+
+#navbar .navbar-icon{
+  float: left;
+  display: inline-block;
+  margin-right: 48%;
+  padding-left: 2%;
+}
+
+#navbar .navbar-icon img{
+  height: 80px;
+  width: auto;
+}
+
+#navbar .navbar-icon .nav-brand{
+  width: 10%;
+}
+
+#overlay .overlay-icon{
+  float: left;
+  margin: 0;
+  display: block;
+  padding-left: 2%;
+}
+#overlay .overlay-icon img{
+  height: 80px;
+  width: auto;
+  padding: 1%;
+}
+#navbar .btn-reg{
+	display: inline-block;
+}
+
+#navbar button{
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+#navbar .btn-reg button{
+	margin-top: 15px;
+	font-size:20px;
+  font-family: "Oswald";
+	font-weight: bold;
+	text-transform: uppercase;
+	padding-right: 25px;
+	padding-left: 25px; 
+	background:none;
+	color:#fff;
+	border: 3px solid #fff;
+	border-radius: 10px;
+	position: relative;
+	transition: 0.3s;
+}
+
+#navbar .btn-reg button:hover{
+	padding-right: 25px;
+	padding-left: 25px;
+	color: #F36E36;
+	background-color: #fff;
+}
+
+#navbar .btn-reg .rbtn{
+	overflow: hidden;
+}
+
+#navbar .navbar-icon .navbar-brand{
+	margin-right: 32%;
+}
+
+.menu-button {
+  position: absolute;
+  top: 25%;
+  right: 2%;
+  height: 27px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: opacity 0.25s ease;
+}
+
+.menu-button:hover {
+  opacity: 0.7;
+}
+
+.menu-button.active .top {
+  transform: translateY(11px) translateX(0) rotate(45deg);
+  background: #fff;
+}
+
+.menu-button.active .middle {
+  opacity: 0;
+  background: #fff;
+}
+
+.menu-button.active .bottom {
+  transform: translateY(-11px) translateX(0) rotate(-45deg);
+  background: #fff;
+}
+
+.menu-button div {
+  background: #fff;
+  border: none;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.menu-button div:nth-of-type(2) {
+  top: 11px;
+}
+
+.menu-button div:nth-of-type(3) {
+  top: 22px;
+}
+
+.menu-button:hover div{
+	animation: expand 0.3s ease forwards;
+	animation-delay: 0.2s;
+}
+
+.menu-button:hover div:nth-of-type(2){
+	animation-delay: 0.25s
+}
+
+.menu-button:hover div:nth-of-type(3){
+	animation-delay: 0.3s;
+}
+
+.overlay {
+  position: fixed;
+  background: #000000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  z-index: 100;
+  visibility: hidden;
+  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+  overflow: hidden;
+}
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+.overlay.open li {
+  animation: fadeInRight 0.4s ease forwards;
+  animation-delay: 0.15s;
+}
+.overlay.open li:nth-of-type(2) {
+  animation-delay: 0.18s;
+}
+.overlay.open li:nth-of-type(3) {
+  animation-delay: 0.23s;
+}
+.overlay.open li:nth-of-type(4) {
+  animation-delay: 0.28s;
+}
+.overlay.open li:nth-of-type(5) {
+  animation-delay: 0.31s;
+}
+.overlay.open li:nth-of-type(6) {
+  animation-delay: 0.34s;
+}
+.overlay.open li:nth-of-type(7) {
+  animation-delay: 0.37s;
+}
+.overlay nav {
+  position: relative;
+  height: 70%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 45px;
+  font-family: 'Alfa Slab One', serif;
+  font-weight: 250;
+  text-align: center;
+}
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  margin-left: -150px;
+}
+.overlay ul li {
+  display: block;
+  height: 17%;
+  min-height: 50px;
+  position: relative;
+  opacity: 0;
+}
+.overlay ul li a {
+	font-family: 'Alfa Slab One';
+  	display: block;
+ 	position: relative;
+  	color: #fff;
+  	text-decoration: none;
+  	text-transform: uppercase;
+  	overflow: hidden;
+}
+
+.overlay ul li a:hover{
+	color: #F36E36;
+}
+
+.overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
+  	width: 100%;
+}
+
+.overlay ul li a:after {
+  	content: '';
+  	position: absolute;
+  	bottom: 0;
+  	left: 50%;
+  	width: 0%;
+  	transform: translateX(-50%);
+  	height: 3px;
+  	background: #F36E36;
+  	transition: 0.5s;
+}
+
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes expand {
+  0% {
+    width: 100%;
+  }
+  50%{
+  	width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.row{
+  margin-top: 21vh;
+  height: 100%;
+}
+
+.col-lg-6{
+  text-decoration:none;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.col-lg-6 .profile img{
+  height: auto;
+  width: 50%;
+  transition: transform 0.35s;
+}
+
+.col-lg-6:nth-of-type(1):hover .profile img{
+  transform: scale(1.2);
+}
+
+.col-lg-6:nth-of-type(2):hover .profile img{
+  transform: scale(1.2);
+}
+
+.content{
+  margin-top: 3vh;
+}
+
+.content .reg-btn .btn{
+  overflow: hidden;
+}
+
+.content .reg-btn .btn:after{
+  height: 100%;
+  left: -50%;
+  top: 0;
+  transform: skew(50deg);
+  transition-duration: 0.4s;
+  transform-origin: top left;
+  width: 0;
+}
+
+.content .reg-btn .btn:hover:after{
+  height: 100%;
+  width: 150%;
+}
+
+.content .reg-btn button{
+  margin-top: 1vh;
+  font-size:30px;
+  font-family:myfont; 
+  text-transform: uppercase;
+  padding-right: 25px;
+  padding-left: 25px; 
+  background: none;
+  color:#F36E36;
+  border: 3px solid #F36E36;
+  border-radius: 15px;
+  position: relative;
+}
+
+.content .reg-btn button, button::after{
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.content .reg-btn button::after, button::before{
+  background: #F36E36;
+  content: '';
+  position: absolute;
+  z-index: -5;
+}
+
+.content .reg-btn button:hover{
+  padding-right: 25px;
+  padding-left: 25px;  
+  color:#fff;
+}
+
+@media screen and (max-width:1600px){
+  #navbar .navbar-icon{
+  margin-right: 20%;
+  }
+}
+
+@media screen and (max-width:1500px){
+  #navbar .items{
+    font-size:20px;
+    margin-right: 0.5%;
+    padding: 25px;
+}
+
+  #navbar .navbar-icon{
+  margin-right: 42%;
+  }
+}
+@media screen and (max-width:1370px){
+  #navbar .items{
+    font:20px Raleway;
+    margin-right: 0.5%;
+    padding: 25px;
+}
+
+  #navbar .navbar-icon{
+  margin-right: 28%;
+  }
+}
+@media screen and (max-width:1200px){
+  #navbar .navbar-icon{
+    margin-right:20%;
+  }
+}
+@media screen and (max-width:992px){
+  #navbar{
+    height: 60px;
+  }
+  #navbar .navbar-icon{
+    padding-left: 2%;
+  }
+
+  #navbar .navbar-icon img{
+    height: 60px;
+    width: auto;
+  }
+}
+
+@media screen and (max-width:768px){
+  #navbar .navbar-icon{
+    margin-right: 0;
+    padding-left: 2%;
+  }
+
+  #navbar .navbar-icon img{
+    height: 60px;
+    width: auto;
+  }
+}
+
+  @media screen and (max-width:464px){
+
+  #navbar{
+    height: 40px;
+  }
+  #navbar .navbar-icon{
+    margin-right: 0;
+    padding-left: 2%;
+  }
+
+  #navbar .navbar-icon img{
+    height: 45px;
+    width: auto;
+  }
+  #overlay .overlay-icon{
+    float: left;
+    margin: 0;
+    display: block;
+    padding-left: 2%;
+  }
+  #overlay .overlay-icon img{
+    height: 45px;
+    width: auto;
+  }
+  .overlay ul{
+    margin-top: -50px;
+  }
+}
+
+@media screen and (max-width:320px){
+  
+  p{
+    text-align: center;
+  }
+  
+  #navbar .navbar-icon{
+    margin-right: 0;
+    padding-left: 2%;
+  }
+
+  #navbar .navbar-icon img{
+    height: 45px;
+    width: auto;
+  }
+
+  #overlay .overlay-icon{
+    float: left;
+    margin: 0;
+    display: block;
+    padding-left: 2%;
+  }
+  .row .col-lg-4 a img{
+  top:82.5%;
+  left: 43.5%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

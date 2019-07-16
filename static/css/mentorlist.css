@@ -1,5 +1,12 @@
+@font-face{
+  font-family: myfont;
+  src:url(BebasNeue.otf);
+}
+
 body{
 	text-transform: uppercase;
+	font-family: myfont;	
+	letter-spacing:1px;
 }
 
 #main{
@@ -7,7 +14,13 @@ body{
 	height: 65px;
 	background-color: #F36E36;
 	text-align: center;
-	margin-bottom: 30px;
+	position:fixed;
+	z-index:1;
+
+}
+
+.panel ul .selected a{
+	font-size: 28px;
 }
 
 img{
@@ -15,32 +28,35 @@ img{
 	height: 65px;
 }
 
-.col-lg-2{
+.col-sm-3{
 	transition: all 0.1s ease-in;
 	transform: scale(1);
 }
-.col-lg-2:hover{
+.col-sm-3:hover{
 	transition: all 0.1s ease-in;
 	transform: scale(1.1);
 }
 
 .panel{
-	position: absolute;
-	width: 17%;
+	position: fixed;
 	height: 100%;
-	margin-top: 15px;
+	margin-top: 75px;
 }
 
 .panel ul li a{
 	color: #fff;
-	font-size: 35px;
+	font-size: 20px;
 	font-weight: bold;
 	text-decoration: none;
+	font-family: myfont;
 }
 
+.col-lg-3{
+	border-right:solid 1px #000000;
+}
 .btn{
 	background-color: #000000;
-	width: 275px;
+	width: 100%;
 	height: auto;
 	border-radius: 10px;
 }
@@ -50,7 +66,7 @@ ul {
 	padding: 0;
 	text-align: center;
 }
-
+	
 ul li {
 	margin: 10px;
 }
@@ -67,7 +83,7 @@ ul li {
 	border-style: solid;
 	border-width: 1px;
 	border-color: #000000;
-	margin: 20px;
+	margin: 40px;
 	border-radius: 15px;
 	padding: 20px;
 }
@@ -78,7 +94,7 @@ ul li {
 }
 #mentor #header{
 	position: relative;
-	margin-left: 16%;
+	margin-left: 20%;
 	height: 125px;
 	width: 125px;
 	border-radius: 50%;
@@ -88,10 +104,11 @@ ul li {
 
 #mentor #header h3{
 	padding-top: 43px;
+	font-family: myfont;
 }
 
 #mentor #subheader{
-	margin:20px;
+	margin:10px;
 	position: relative;
 }
 
@@ -99,12 +116,62 @@ ul li {
 	position: relative;
 }
 
+.list{
+	padding-top:60px;
+}
 #mentor #general{
-	margin: 20px;
+	margin: 12px;
 	text-align: left;
+	font-size: 20px;
+	overflow: hidden;
 }
 
 .blur #mentor{
 	background-color: #808080;
 }
 
+@media screen and (max-width:1600px){
+	.panel{
+	margin-top:65px
+	}
+	.panel ul .selected a{
+		font-size:20px;
+	}
+	ul li{
+	margin:10px;
+	}
+	#mentor{
+		margin: 20px;
+		padding: 10px;	
+	}
+	#mentor #header{
+	margin-left:10%;
+	}
+}
+/*Details of Mentors*/
+.detail_title h1{
+	text-align:center;
+	margin-top:70px;
+	font-size:50px;
+}
+
+.subdetail{
+	display:inline-block;
+}
+
+.detail{
+	margin-top:0px;
+	font-size:30px;
+}
+
+.detail h2{
+	width:300px;
+	background-color:#000000;
+	color:#fff;
+	padding:5px;
+	margin:5px;
+}
+
+.discpdetail{
+	font-size:35px;
+}

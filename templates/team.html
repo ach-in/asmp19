@@ -44,7 +44,7 @@
       				<!-- <li><a href="index.html">Testimonials</a></li> -->
       				<li><a target="_blank" href="https://drive.google.com/file/d/1LzjDlnKR6xpQxgQNlDKbwqIcUqSzFa7p/view?usp=sharing">Brochure</a></li>
       				<li><a href="#">Contact Us</a></li>
-      				<li><a target="_blank" href="https://tinyurl.com/ASMP-mentor-reg" style="color: #FE6D2C">Register Now</a></li>
+      				<li><a target="_blank" href="{% url 'registration:registration' %}" style="color: #FE6D2C">Register Now</a></li>
     			</ul>
   			</nav>
 		</div>
@@ -97,6 +97,30 @@
 		</div>
 	</div>
 </div>
+<script>
+		var prevScrollpos = window.pageYOffset;
+		window.onscroll = function() {
+		var currentScrollPos = window.pageYOffset;
+  			if (prevScrollpos > currentScrollPos) {
+    			document.getElementById("navbar").style.top = "0";
+  			} else {
+    			document.getElementById("navbar").style.top = "-100px";
+  			}
+  		prevScrollpos = currentScrollPos;
+		}
+		function registration() {
+			window.open("{% url 'registration:registration' %}");
+		}
+		function brochure() {
+			window.open("https://goo.gl/VvnjSB");
+		}
+		function gallery() {
+			window.open("https://drive.google.com/drive/folders/0B4EFHfUFWL_teTRrdGNtZHlHVUU");
+		}
+		function feedback(){
+			window.open("https://tinyurl.com/yaoh8r8l");
+		}
+</script>
 <script>
 		var prevScrollpos = window.pageYOffset;
 		window.onscroll = function() {

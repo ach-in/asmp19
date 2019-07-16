@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'homepage',
     'team',
     'registration',
+		'carts',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -10,17 +10,41 @@
   {% block meta %}
   {% endblock %}
 </head>
-<body>
-<div class="container">
+<body style="background-color:#F36E36;">
+<div class="container bg_detail">
   <div class="row">
     <div class="col-md-12">
-{% block content %}
-	<div>
-		<h1>{{mentor.code}}</h1>
-		<h2>{{mentor.company}}</h2>
-		<h3>{{mentor.designation}}</h3>
-		<p>{{mentor.discp}}</p>
-	</div>
+{% block containt %}
+<div class="detail_title">
+	<h1><u>{{mentor.code}}</u></h1>
+</div>
+<div class="detail">
+    <div class="degree">
+      <h2 class="subdetail">Degree</h2><h3 class="subdetail">{{mentor.degree}}</h3>
+    </div>
+    <div class="department">
+      <h2 class="subdetail">Department</h2><h3 class="subdetail">{{mentor.department}}</h3>
+    </div>
+    <div class="yog">
+      <h2 class="subdetail">Year of Graduation</h2><h3 class="subdetail">{{mentor.year}}</h3>
+    </div>
+    <div class="hostel">
+      <h2 class="subdetail">Hostel</h2><h3 class="subdetail">{{mentor.hostel}}</h3>
+    </div>
+    <div class="designation">
+      <h2 class="subdetail">Designation</h2><h3 class="subdetail">{{mentor.designation}}</h3>
+    </div>
+    <div class="company">
+      <h2 class="subdetail">Company</h2><h3 class="subdetail">{{mentor.company}}</h3>
+    </div>
+    <div class="work">
+      <h2 class="subdetail">Work Profile</h2><h3 class="subdetail">{{mentor.discp}}</h3>
+    </div>
+  </div>
+  <!--div class="discpdetail">
+    <p><i>{{mentor.discp}}</i></p>
+  </div>
+</div-->
 {% endblock %}
     </div>
   </div>

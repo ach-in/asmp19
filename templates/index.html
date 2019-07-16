@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-83546557-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-83546557-1');
+</script>
 
 	{%load static%}
-
+	<meta property="og:title" content="ASMP" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://asmp.sarc-iitb.org" />
+	<meta property="og:image" content="http://asmp.sarc-iitb.org{%static '/img/asmplogo2.png' %}" />
+	<meta property="og:description" content="Alumni Student Mentorship Programme, an initiative by Student Alumni Relations Cell aims at creating a platform to foster meaningful mentoring relationships between alumni and current students" />
 	<title>Alumni Student Mentorship Program</title>
-	<link rel="shortcut icon" href="{%static 'img/ASMP logo black.ico'%}" />
+	<link rel="shortcut icon" href="{%static 'img/asmp.ico'%}" />
 	<link rel="stylesheet" type="text/css" href="{%static 'css/style.css'%}">
 	<link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css'%}">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
@@ -66,7 +79,7 @@
       				<!-- <li><a href="#testimonials">Testimonials</a></li> -->
       				<li><a target="_blank" href="https://drive.google.com/file/d/1LzjDlnKR6xpQxgQNlDKbwqIcUqSzFa7p/view?usp=sharing">Brochure</a></li>
       				<li><a href="{% url 'team:team' %}">Contact Us</a></li>
-      				<li><a target="_blank" href="https://tinyurl.com/ASMP-mentor-reg" style="color: #FE6D2C">Register Now</a></li>
+      				<li><a target="_blank" href="{% url 'registration:registration' %}" style="color: #FE6D2C">Register Now</a></li>
     			</ul>
   			</nav>
 		</div>
@@ -85,7 +98,7 @@
 
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-			    	<img src="{%static 'img/testimonial1.png'%}">
+			    	<img src="{%static 'img/MenteeRegOpen.jpg'%}">
 			    </div>
 
 			    <div class="carousel-item">
@@ -213,7 +226,7 @@
 						<p>Mentors are invited to interact with a group of 4-5 students. Unlike attending a career talk, group mentoring is a brief 2-sided approach towards giving students insight towards a career option where they can direct the discussion towards the relevent domain.
 						</p>
 					</div>
-					<div class="row">
+					<div class="row"> 
 						<div class="btn-feedback">
 							<button class="btn fbtn" onclick="feedback()">Feedback</button>		
 						</div>
@@ -263,7 +276,7 @@
 		<div class="row second">
 			<div class="col-lg-6 leftctm">
 				<div class="ctm">
-					<p>Gaurav Raj Singh</p>	
+					<p>Anvay Varerkar</p>	
 				</div>
 				<div class="contact">
 					<div class="phone" >
@@ -351,13 +364,13 @@
   		prevScrollpos = currentScrollPos;
 		}
 		function registration() {
-			window.open("https://tinyurl.com/ASMP-mentor-reg");
+			window.open("{% url 'registration:registration' %}");
 		}
 		function brochure() {
 			window.open("https://drive.google.com/file/d/1LzjDlnKR6xpQxgQNlDKbwqIcUqSzFa7p/view?usp=sharing");
 		}
 		function gallery() {
-			window.open("https://drive.google.com/drive/folders/0B4EFHfUFWL_teTRrdGNtZHlHVUU");
+			window.open("https://drive.google.com/drive/folders/1CFSMCATmJAj7dQUdLcCuuOeOKCUJlvU3");
 		}
 		function feedback(){
 			window.open("https://docs.google.com/forms/d/e/1FAIpQLScNTFaxfao4JT0qwBcmLtyETVHiyWaIXgLWu3Ekeb97-22bJA/viewform?chromeless=1&edit_requested=true");
