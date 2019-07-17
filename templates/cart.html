@@ -1,5 +1,30 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% if cart.mentors.all %}
 <h1> Cart </h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Mentor ID</th>
+			<th scope="col">Mentor Designation</th>
+			<th scope="col">Mentor Description</th>
+			<th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+		{% for mentor in cart.mentors.all %}
+    <tr>
+      <th scope="row">{{ forloop.counter }}</th>
+      <td>{{mentor.code}}</td>
+      <td>{{mentor.designation}}</td>
+			<td>{{mentor.discp}}</td>
+			<td><button><a href="{% url 'registration:mentor_detail' mentor.id mentor.slug %}" class="button">Go to Mentor Profile<br /></a> {{mentor.code}}</button></td>
+			<td>{% include 'update-cart.html' with mentor=mentor cart=cart in_cart=True %}</td>
+		</tr>
+		{% endfor %}
+{% else %}
+<h2>Cart is Empty</h2>
+{% endif %}
 {% endblock %}

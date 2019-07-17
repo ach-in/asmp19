@@ -1,5 +1,6 @@
 from django.conf.urls import url
 from . import views
+from carts.views import cart_home, cart_update
 #your url for the registration app
 
 app_name='registration'
@@ -18,4 +19,6 @@ urlpatterns = [
 	url(r'^mentorlist/civilservice/$', views.civilservice, name='civilservice'),
 	url(r'^mentorlist/it/$', views.infotech, name='infotech'),
 	url(r'^mentorlist/(?P<id>\d+)/(?P<slug>[-\w]+)/$', views.mentor_detail, name='mentor_detail'),
+	url(r'^mentorlist/cart/$', cart_home, name='cart_home'),
+	url(r'^mentorlist/cart/update$', cart_update, name='cart_update'),		
 ]

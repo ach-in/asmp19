@@ -22,5 +22,4 @@ urlpatterns = [
     url(r'^', include('homepage.urls'), name='homepage'),
     url(r'^team/', include('team.urls'), name='team'),
     url(r'^registration/', include('registration.urls'), name='registration'),
-		url(r'^cart/', cart_home, name='cart'),
 ]
